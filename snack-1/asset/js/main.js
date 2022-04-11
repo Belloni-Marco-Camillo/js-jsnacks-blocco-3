@@ -49,10 +49,32 @@ const cars = [{
 /* Dividi le automobili in 3 array separati: nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto.
 Infine stampa separatamente i 3 array. */
 
-const resultBenzina = cars.filter(car => car.fuels == `benzina`);
+/* const resultBenzina = cars.filter(car => car.fuels == `benzina`);
 const resultDiesel = cars.filter(car => car.fuels == `diesel`);
-const resultOther = cars.filter(car => car.fuels !== `diesel` && car.fuels !== `benzina`);
+const resultOther = cars.filter(car => car.fuels !== `diesel` && car.fuels !== `benzina`); */
 
+const resultBenzina = cars.filter(element => {
+    if (element.fuels === `benzina`) {
+        return true
+    }
+    return false
+})
+
+const resultDiesel = cars.filter(element => {
+    if (element.fuels === `diesel`) {
+        return true
+    }
+    return false
+})
+
+const resultOther = cars.filter(element => {
+    if (element.fuels !== `benzina` && element.fuels !== `diesel`) {
+        return true
+    }
+    return false
+})
+
+document.getSelection(``)
 
 
 console.log(resultBenzina);

@@ -28,4 +28,9 @@ const drivers = [{
 console.log(canDrive); */
 
 const canDrive = drivers.filter(driver => { if (driver.driverAge > 18 && driver.driverAge < 80) return driver })
+
+canDrive.forEach(element => {
+    console.log(`${element.driverName} ${element.driverSecondName} può guidare`);
+});
+
 console.log(canDrive);

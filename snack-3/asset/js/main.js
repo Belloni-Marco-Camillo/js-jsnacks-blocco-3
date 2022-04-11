@@ -5,6 +5,13 @@ const animals = [
 ];
 
 
-const resultMammiferi = animals.filter(animal => animal.classe == `mammiferi`);
+/* const resultMammiferi = animals.filter(animal => animal.classe == `mammiferi`); */
+
+const resultMammiferi = animals.filter(element => {
+    if (element.classe == `mammiferi`) {
+        return true
+    }
+    return false
+})
 
 console.log(resultMammiferi);
